@@ -17,6 +17,28 @@ def count_infected(city: list[str]) -> int:
     2 を返す。
     """
 
+    count = 0
+    for num in city:
+        if num[0] == "I":
+            count = count + 1
+
+    return count
+
+def has_an_infected_neighbor(city: list[str], position: int) -> bool:
+    """
+    cityの与えられたposition にいる個人に、感染した隣人がいるかどうか確認。
+    そのポジションの個人はSであることを前提して良い。
+    """
+    assert city[position] == "S" # 与えられたpositionの個人がS出ない場合はエラー
+    n = len(city)
+
+    if position > 0 and city[position - 1][0] == "I":
+        print(True)
+    elif position < n - 1 and city[position + 1][0]== "I":
+        print(True)
+    else:
+        print(False)
+
     return
 
 ### この下のコードは触らない
