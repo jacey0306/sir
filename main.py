@@ -31,15 +31,16 @@ def has_an_infected_neighbor(city: list[str], position: int) -> bool:
     """
     assert city[position] == "S" # 与えられたpositionの個人がS出ない場合はエラー
     n = len(city)
+    has_infected_neighbor = False
 
     if position > 0 and city[position - 1][0] == "I":
-        print(True)
+        has_infected_neighbor = True
     elif position < n - 1 and city[position + 1][0]== "I":
-        print(True)
+        has_infected_neighbor = True
     else:
-        print(False)
+        has_infected_neighbor = False
 
-    return
+    return has_infected_neighbor
 
 ### この下のコードは触らない
 
