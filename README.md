@@ -1,5 +1,10 @@
 # sir
 
+## before editing code  
+```bash
+git pull
+```
+
 ## send to github  
 
 ```bash
